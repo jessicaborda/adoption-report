@@ -1,8 +1,9 @@
 import styles from './DashboardView.module.scss';
-import TeamMetric from '../../../components/molecules/team/TeamMetric';
+import TeamMetric from '../../../components/molecules/Team/TeamMetric';
 import Users from '../../../components/molecules/Users/Users';
 import UseTools from '../../../components/molecules/UseTools/UseTools';
 import { EvolutionUse } from '../../../components/molecules/EvolutionUse/EvolutionUse';
+import InformationModal from '../../../components/atoms/InformationModal/InformationModal';
 
 const MOCK_USAGE_DATA = [
   { month: 'Ene', Daily: 30, Frequent: 20, Low: 15, "No Use": 59 },
@@ -19,6 +20,7 @@ export default function DashboardView() {
       {/* 1. Header Section */}
       <div className={styles.header}>
         <h2>Adoption Report</h2>
+        <InformationModal />
       </div>
 
       {/* 2. Top Row: 3 equal columns */}
