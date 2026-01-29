@@ -51,7 +51,7 @@
 
 .leftPanel {
   @extend .box;
-  height: fit-content; // h-96
+  height: 100%;
 
 
   @media (min-width: 768px) {
@@ -63,7 +63,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  height: 24rem; // h-96
+  height: fit-content; // Changed from 32rem
 
   @media (min-width: 768px) {
     grid-column: span 2;
@@ -72,5 +72,5 @@
 
 .rightPanelItem {
   @extend .box;
-  flex: 1;
+  height: fit-content; // Changed from 100% (via .box) and flex: 1
 }

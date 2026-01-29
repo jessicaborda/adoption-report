@@ -1,7 +1,17 @@
 import styles from './DashboardView.module.scss';
 import TeamMetric from '../../../components/molecules/team/TeamMetric';
 import Users from '../../../components/molecules/Users/Users';
-import UseTools from '../../../components/molecules/useTools/UseTools';
+import UseTools from '../../../components/molecules/UseTools/UseTools';
+import { EvolutionUse } from '../../../components/molecules/EvolutionUse/EvolutionUse';
+
+const MOCK_USAGE_DATA = [
+  { month: 'Ene', Daily: 30, Frequent: 20, Low: 15, "No Use": 59 },
+  { month: 'Feb', Daily: 35, Frequent: 22, Low: 12, "No Use": 55 },
+  { month: 'Mar', Daily: 32, Frequent: 25, Low: 18, "No Use": 49 },
+  { month: 'Abr', Daily: 38, Frequent: 28, Low: 10, "No Use": 48 },
+  { month: 'May', Daily: 42, Frequent: 30, Low: 8, "No Use": 44 },
+  { month: 'Jun', Daily: 45, Frequent: 32, Low: 5, "No Use": 42 },
+];
 
 export default function DashboardView() {
   return (
@@ -65,10 +75,22 @@ export default function DashboardView() {
         {/* Right Column (Remaining/66%) -> Divided into Top/Bottom */}
         <div className={styles.rightPanelContainer}>
           {/* Right Top Container */}
-          <div className={styles.rightPanelItem}></div>
+          <div className={styles.rightPanelItem}>
+            <EvolutionUse 
+              title="Evolución de uso" 
+              description="Evolución de adopción de herramientas en el tiempo" 
+              data={MOCK_USAGE_DATA} 
+            />
+          </div>
 
           {/* Right Bottom Container */}
-          <div className={styles.rightPanelItem}></div>
+          <div className={styles.rightPanelItem}>
+            <EvolutionUse 
+              title="Evolución de uso" 
+              description="Evolución de adopción de herramientas en el tiempo" 
+              data={MOCK_USAGE_DATA} 
+            />
+          </div>
         </div>
       </div>
     </div>
