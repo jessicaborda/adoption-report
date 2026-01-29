@@ -1,5 +1,5 @@
-import styles from './UseTools.module.scss';
-import ToolMetric from '../../atoms/ToolMetric/ToolMetric';
+import styles from './ToolUsage.module.scss';
+import MetricCard from '../../atoms/MetricCard/MetricCard';
 
 interface ToolData {
   toolName: string;
@@ -7,13 +7,13 @@ interface ToolData {
   totalUsers: number;
 }
 
-interface UseToolsProps {
+interface ToolUsageProps {
   title: string;
   description: string;
   tools: ToolData[];
 }
 
-export default function UseTools({ title, description, tools }: UseToolsProps) {
+export default function ToolUsage({ title, description, tools }: ToolUsageProps) {
   // Ensure we display up to 6 tools as requested, or map all if dynamic
   const displayTools = tools.slice(0, 6); 
 
@@ -24,7 +24,7 @@ export default function UseTools({ title, description, tools }: UseToolsProps) {
       
       <div className={styles.toolsList}>
         {displayTools.map((tool, index) => (
-          <ToolMetric 
+          <MetricCard 
             key={index}
             toolName={tool.toolName}
             count={tool.count}

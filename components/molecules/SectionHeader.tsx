@@ -1,12 +1,12 @@
 import { ReactNode } from 'react';
 
-interface PageHeaderProps {
+interface SectionHeaderProps {
   title: string;
   description?: string;
   action?: ReactNode;
 }
 
-export const PageHeader = ({ title, description, action }: PageHeaderProps) => {
+export const SectionHeader = ({ title, description, action }: SectionHeaderProps) => {
   return (
     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8 pb-6 border-b border-gray-200">
       <div>

@@ -1,11 +1,11 @@
-import styles from './NumberUsers.module.scss';
+import styles from './MetricValue.module.scss';
 
-interface NumberUsersProps {
+interface MetricValueProps {
   userCount: string | number;
   description: string;
 }
 
-export default function NumberUsers({ userCount, description }: NumberUsersProps) {
+export default function MetricValue({ userCount, description }: MetricValueProps) {
   return (
     <div className={styles.container}>
       <h1>{userCount}</h1>

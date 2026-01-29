@@ -1,11 +1,11 @@
-import styles from './PercentageUsers.module.scss';
+import styles from './PercentageRing.module.scss';
 
-interface PercentageUsersProps {
+interface PercentageRingProps {
   percentage: number;
   description: string;
 }
 
-export default function PercentageUsers({ percentage, description }: PercentageUsersProps) {
+export default function PercentageRing({ percentage, description }: PercentageRingProps) {
   // Determine the color class based on percentage ranges
   const getColorClass = (val: number) => {
     if (val >= 60) return styles.daily; // High usage

@@ -1,28 +1,23 @@
-import { DashboardData } from './types';
+import { TeamAdoptionData } from './types';
 
-// Mock data
-const MOCK_DATA: DashboardData = {
-  id: 'dash-001',
-  title: 'Q1 Adoption Report',
-  metrics: {
-    activeUsers: 12500,
-    retention: 85.5,
-    revenue: 450000,
-  },
-  lastUpdated: new Date().toISOString(),
-};
 
-/**
- * Simulate server-side delay
- */
-const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
-export async function getDashboardData(): Promise<DashboardData> {
-  // Simulate network latency
-  await delay(1500);
-  
-  // Randomly throw error to test error boundaries if needed (not implemented yet)
-  // if (Math.random() < 0.1) throw new Error('Failed to fetch dashboard data');
+export async function getTeamAdoptionData(): Promise<TeamAdoptionData | null> {
+  try {
+    const res = await fetch("http://localhost:3001/adoption", {
+      cache: "no-store",
+      // Add a short timeout to prevent hanging
+      signal: AbortSignal.timeout(5000)
+    });
 
-  return MOCK_DATA;
+    if (!res.ok) {
+      console.error(`API Error: ${res.status} ${res.statusText}`);
+      return null;
+    }
+
+    return res.json();
+  } catch (error) {
+    console.error("Fetch failed. Please ensure the json-server is running on port 3001.", error);
+    return null;
+  }
 }

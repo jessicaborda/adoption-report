@@ -1,15 +1,27 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { TeamAdoptionData } from './types';
+import { getTeamAdoptionData } from './api';
 
-export function useDashboardControls() {
-  const [filter, setFilter] = useState('all');
+export function useDashboardData() {
+  const [data, setData] = useState<TeamAdoptionData | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<Error | null>(null);
 
-  const updateFilter = (newFilter: string) => {
-    setFilter(newFilter);
-    console.log(`Filter updated to: ${newFilter}`);
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const adoptionData = await getTeamAdoptionData();
+        setData(adoptionData);
+      } catch (err) {
+        setError(err instanceof Error ? err : new Error('An error occurred'));
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  return {
-    filter,
-    updateFilter,
-  };
+    fetchData();
+  }, []);
+
+  return { data, loading, error };
 }

@@ -1,12 +1,12 @@
-import styles from './ToolMetric.module.scss';
+import styles from './MetricCard.module.scss';
 
-interface ToolMetricProps {
+interface MetricCardProps {
   toolName: string;
   count: number;
   totalUsers: number; // To calculate percentage
 }
 
-export default function ToolMetric({ toolName, count, totalUsers }: ToolMetricProps) {
+export default function MetricCard({ toolName, count, totalUsers }: MetricCardProps) {
   const percentage = Math.round((count / totalUsers) * 100);
 
   return (

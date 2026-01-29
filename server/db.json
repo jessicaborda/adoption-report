@@ -1,0 +1,150 @@
+{
+    "adoption": {
+        "team_name": "Engineering Team",
+        "team_size": "127",
+        "last_month_daily_use_users_number": 45,
+        "last_month_daily_use_users_percentage": "36%",
+        "last_month_no_use_users_number": 89,
+        "last_month_no_use_users_percentage": "72%",
+        "last_month_users_usage_by_tool": [
+            {
+                "tool_name": "Copilot",
+                "users_number": 97
+            },
+            {
+                "tool_name": "ChatGPT",
+                "users_number": 88
+            },
+            {
+                "tool_name": "Cursor",
+                "users_number": 64
+            },
+            {
+                "tool_name": "Gemini",
+                "users_number": 52
+            },
+            {
+                "tool_name": "Windsurf",
+                "users_number": 30
+            },
+            {
+                "tool_name": "NotebookLM",
+                "users_number": 25
+            }
+        ],
+        "last_six_months": {
+            "coding_tools": [
+                {
+                    "year": 2026,
+                    "month": 1,
+                    "month_name": "Ene",
+                    "no_use_users_number": 59,
+                    "low_use_users_number": 15,
+                    "frequent_use_users_number": 20,
+                    "daily_use_users_number": 30
+                },
+                {
+                    "year": 2026,
+                    "month": 2,
+                    "month_name": "Feb",
+                    "no_use_users_number": 55,
+                    "low_use_users_number": 12,
+                    "frequent_use_users_number": 22,
+                    "daily_use_users_number": 35
+                },
+                {
+                    "year": 2026,
+                    "month": 3,
+                    "month_name": "Mar",
+                    "no_use_users_number": 49,
+                    "low_use_users_number": 18,
+                    "frequent_use_users_number": 25,
+                    "daily_use_users_number": 32
+                },
+                {
+                    "year": 2026,
+                    "month": 4,
+                    "month_name": "Abr",
+                    "no_use_users_number": 48,
+                    "low_use_users_number": 10,
+                    "frequent_use_users_number": 28,
+                    "daily_use_users_number": 38
+                },
+                {
+                    "year": 2026,
+                    "month": 5,
+                    "month_name": "May",
+                    "no_use_users_number": 44,
+                    "low_use_users_number": 8,
+                    "frequent_use_users_number": 30,
+                    "daily_use_users_number": 42
+                },
+                {
+                    "year": 2026,
+                    "month": 6,
+                    "month_name": "Jun",
+                    "no_use_users_number": 42,
+                    "low_use_users_number": 5,
+                    "frequent_use_users_number": 32,
+                    "daily_use_users_number": 45
+                }
+            ],
+            "general_tools": [
+                {
+                    "year": 2026,
+                    "month": 1,
+                    "month_name": "Ene",
+                    "no_use_users_number": 60,
+                    "low_use_users_number": 10,
+                    "frequent_use_users_number": 15,
+                    "daily_use_users_number": 39
+                },
+                {
+                    "year": 2026,
+                    "month": 2,
+                    "month_name": "Feb",
+                    "no_use_users_number": 58,
+                    "low_use_users_number": 12,
+                    "frequent_use_users_number": 14,
+                    "daily_use_users_number": 40
+                },
+                {
+                    "year": 2026,
+                    "month": 3,
+                    "month_name": "Mar",
+                    "no_use_users_number": 55,
+                    "low_use_users_number": 15,
+                    "frequent_use_users_number": 12,
+                    "daily_use_users_number": 42
+                },
+                {
+                    "year": 2026,
+                    "month": 4,
+                    "month_name": "Abr",
+                    "no_use_users_number": 52,
+                    "low_use_users_number": 18,
+                    "frequent_use_users_number": 10,
+                    "daily_use_users_number": 44
+                },
+                {
+                    "year": 2026,
+                    "month": 5,
+                    "month_name": "May",
+                    "no_use_users_number": 50,
+                    "low_use_users_number": 20,
+                    "frequent_use_users_number": 8,
+                    "daily_use_users_number": 46
+                },
+                {
+                    "year": 2026,
+                    "month": 6,
+                    "month_name": "Jun",
+                    "no_use_users_number": 48,
+                    "low_use_users_number": 22,
+                    "frequent_use_users_number": 5,
+                    "daily_use_users_number": 49
+                }
+            ]
+        }
+    }
+}

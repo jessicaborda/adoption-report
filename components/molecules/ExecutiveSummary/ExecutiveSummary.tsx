@@ -1,8 +1,8 @@
-import styles from './Users.module.scss';
-import NumberUsers from '../../atoms/NumberUsers/NumberUsers';
-import PercentageUsers from '../../atoms/PercentageUsers/PercentageUsers';
+import styles from './ExecutiveSummary.module.scss';
+import MetricValue from '../../atoms/MetricValue/MetricValue';
+import PercentageRing from '../../atoms/PercentageRing/PercentageRing';
 
-interface UsersProps {
+interface ExecutiveSummaryProps {
   title: string;
   userMetrics: {
     count: string | number;
@@ -12,19 +12,19 @@ interface UsersProps {
   };
 }
 
-export default function Users({ title, userMetrics }: UsersProps) {
+export default function ExecutiveSummary({ title, userMetrics }: ExecutiveSummaryProps) {
   return (
     <div className={styles.container}>
       <h3 className={styles.title}>{title}</h3>
       <div className={styles.contentRow}>
         <div className={styles.item}>
-          <NumberUsers 
+          <MetricValue 
             userCount={userMetrics.count} 
             description={userMetrics.countDescription} 
           />
         </div>
         <div className={styles.item}>
-          <PercentageUsers 
+          <PercentageRing 
             percentage={userMetrics.percentage} 
             description={userMetrics.percentageDescription} 
           />
