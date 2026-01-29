@@ -1,0 +1,27 @@
+@use '../../../styles/variants.scss' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.title {
+  text-align: center;
+  width: 100%;
+}
+
+.contentRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  flex: 1;
+}
+
+

@@ -1,0 +1,76 @@
+@use '../../../styles/variants.scss' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; // space-y-6 equivalent
+  padding: 1.5rem; // px-6 py-12 equivalent
+  background: $color-dark-background;
+}
+
+.box {
+  background: $color-gradient-background;
+  border: 0.5px solid rgba(255, 255, 255, 0.2); // Defaulting to a subtle white border since color wasn't specified
+  border-radius: 1.5rem;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; // Ensure content respects border radius
+}
+
+.header {
+  width: 100%;
+  height: 5rem; // h-20
+  display: flex;
+  align-items: center;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem; // gap-6
+
+  @media (min-width: 768px) { // md: breakpoint
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.metricCard {
+  @extend .box;
+  height: 100%;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.leftPanel {
+  @extend .box;
+  height: fit-content; // h-96
+
+
+  @media (min-width: 768px) {
+    grid-column: span 1;
+  }
+}
+
+.rightPanelContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 24rem; // h-96
+
+  @media (min-width: 768px) {
+    grid-column: span 2;
+  }
+}
+
+.rightPanelItem {
+  @extend .box;
+  flex: 1;
+}

@@ -1,0 +1,38 @@
+{
+    "team_name": "string",
+    "team_size": "string",
+    "last_month_daily_use_users_number": 99,
+    "last_month_daily_use_users_percentage": "string: 99%",
+    "last_month_no_use_users_number": 99,
+    "last_month_no_use_users_percentage": "string: 99%",
+    "last_month_users_usage_by_tool": [
+        {
+            "tool_name": "string",
+            "users_number": 99
+        }
+    ],
+    "last_six_months": {
+        "coding_tools": [
+            {
+                "year": 2026,
+                "month": 1,
+                "month_name": "string",
+                "no_use_users_number": 99,
+                "low_use_users_number": 99,
+                "frequent_use_users_number": 99,
+                "daily_use_users_number": 99
+            }
+        ],
+        "general_tools": [
+            {
+                "year": 2026,
+                "month": 1,
+                "month_name": "string",
+                "no_use_users_number": 99,
+                "low_use_users_number": 99,
+                "frequent_use_users_number": 99,
+                "daily_use_users_number": 99
+            }
+        ]
+    }
+}

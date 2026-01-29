@@ -1,0 +1,54 @@
+@use '../../../styles/variants.scss' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.chart {
+  position: relative;
+  width: 9.5rem; 
+  height: 9.5rem;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  // Default color if no class is applied
+  --chart-color: #{$color-daily-use};
+
+  &.daily { --chart-color: #{$color-daily-use}; }
+  &.frequent { --chart-color: #{$color-frequent-use}; }
+  &.low { --chart-color: #{$color-low-use}; }
+  &.none { --chart-color: #{$color-no-use}; }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    // Use the CSS variable for color
+    background: conic-gradient(var(--chart-color) calc(var(--percentage) * 1%), transparent 0);
+    
+    mask: radial-gradient(transparent 88%, black 89%);
+    -webkit-mask: radial-gradient(transparent 88%, black 89%);
+  }
+}
+
+.content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 10;
+}
+
