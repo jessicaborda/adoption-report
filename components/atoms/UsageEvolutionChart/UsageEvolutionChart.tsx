@@ -12,6 +12,7 @@ import {
 } from "recharts";
 
 import { UsageEvolutionChartProps } from "./UsageEvolutionChart.types";
+import { chartColors } from "./UsageEvolutionChart.styles";
 
 export const UsageEvolutionChart = ({ data }: UsageEvolutionChartProps) => {
   const [mounted, setMounted] = useState(false);
@@ -33,27 +34,28 @@ export const UsageEvolutionChart = ({ data }: UsageEvolutionChartProps) => {
           dataKey="month" 
           axisLine={false}
           tickLine={false}
-          tick={{ fill: 'rgba(255,255,255,0.5)', fontSize: 12 }}
+          tick={{ fill: 'rgba(255,255,255,0.5)', fontSize: 12, fontFamily: 'var(--font-inter)' }}
           dy={10}
         />
         <YAxis 
           axisLine={false}
           tickLine={false}
-          tick={{ fill: 'rgba(255,255,255,0.5)', fontSize: 12 }}
+          tick={{ fill: 'rgba(255,255,255,0.5)', fontSize: 12, fontFamily: 'var(--font-inter)' }}
         />
         <Tooltip 
           contentStyle={{ 
             backgroundColor: '#3B1E43', 
             border: 'none', 
             borderRadius: '8px',
-            color: '#fff' 
+            color: '#fff',
+            fontFamily: 'var(--font-inter)'
           }}
-          itemStyle={{ color: '#fff' }}
+          itemStyle={{ color: '#fff', fontFamily: 'var(--font-inter)' }}
         />
         <Line 
           type="monotone" 
           dataKey="Daily" 
-          stroke="#7ED7B3" 
+          stroke={chartColors.daily} 
           strokeWidth={3}
           dot={false}
           activeDot={{ r: 6 }}
@@ -61,7 +63,7 @@ export const UsageEvolutionChart = ({ data }: UsageEvolutionChartProps) => {
         <Line 
           type="monotone" 
           dataKey="Frequent" 
-          stroke="#FFD166" 
+          stroke={chartColors.frequent} 
           strokeWidth={3}
           dot={false}
           activeDot={{ r: 6 }}
@@ -69,7 +71,7 @@ export const UsageEvolutionChart = ({ data }: UsageEvolutionChartProps) => {
         <Line 
           type="monotone" 
           dataKey="Low" 
-          stroke="#F4A261" 
+          stroke={chartColors.low} 
           strokeWidth={3}
           dot={false}
           activeDot={{ r: 6 }}
@@ -77,7 +79,7 @@ export const UsageEvolutionChart = ({ data }: UsageEvolutionChartProps) => {
         <Line 
           type="monotone" 
           dataKey="No Use" 
-          stroke="#C77DFF" 
+          stroke={chartColors.noUse} 
           strokeWidth={3}
           dot={false}
           activeDot={{ r: 6 }}

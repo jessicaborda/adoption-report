@@ -9,6 +9,14 @@
   min-height: 100vh;
 }
 
+@media (min-width: 1728px) {
+  .container {
+    max-width: 1728px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
 .box {
   background: $color-gradient-background;
   border: 0.5px solid rgba(255, 255, 255, 0.2); // Defaulting to a subtle white border since color wasn't specified

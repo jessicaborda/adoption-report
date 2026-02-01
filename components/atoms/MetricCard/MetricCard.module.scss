@@ -33,7 +33,7 @@
   width: 100%;
   height: 0.5rem; // Adjust height to match image
   background-color: rgba(0, 0, 0, 0.4); // Dark track
-  border-radius: 0.125rem; // Subtle rounding or none as per image
+  border-radius: 0.5rem; // Subtle rounding or none as per image
   overflow: hidden;
 }
 
@@ -43,4 +43,5 @@
   // Assuming $color-accent matches the cyan in the image (#00B4D8). 
   // If no border-radius needed on fill, remove it.
   width: var(--progress);
+  border-radius: 0.5rem;
 }

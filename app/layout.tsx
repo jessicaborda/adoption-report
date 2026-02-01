@@ -17,7 +17,7 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: 'Adoption Report',
-  description: 'Clean Architecture Pattern for Next.js App Router',
+  description: 'Prueba técnica para el puesto de Frontend Developer',
 };
 
 export default function RootLayout({

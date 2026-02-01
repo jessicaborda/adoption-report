@@ -1,6 +1,6 @@
 export const chartColors = {
-  daily: "#7ED7B3",
-  frequent: "#FFD166",
-  low: "#F4A261",
-  noUse: "#C77DFF"
+  daily: "#8FC0A9",
+  frequent: "#FFC759",
+  low: "#FFB997",
+  noUse: "#B279A7"
 };

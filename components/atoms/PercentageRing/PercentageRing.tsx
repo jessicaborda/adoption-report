@@ -18,7 +18,7 @@ export default function PercentageRing({ percentage, description }: PercentageRi
     <div className={styles.container}>
       <div 
         className={`${styles.chart} ${getColorClass(percentage)}`} 
-        style={{ '--percentage': percentage } as React.CSSProperties}
+        style={{ "--percentage": `${percentage}%` } as React.CSSProperties}
       >
         <div className={styles.content}>
           <h2 className={styles.percentage}>{percentage}%</h2>
