@@ -9,7 +9,7 @@ export default function Home() {
           Bienvenido al Reporte de Adopción
         </h1>
         <p className={styles.description}>
-          Esta es una prueba técnica para el puesto de Frontend Developer. Explora los datos detallados sobre las tendencias de adopción y uso de herramientas en la organización. 
+          Esta es una prueba técnica para el puesto de Frontend Engineer. Explora los datos detallados sobre las tendencias de adopción y uso de herramientas en la organización.
           Este reporte proporciona una visión integral para la toma de decisiones estratégicas.
         </p>
         <Link href="/dashboard" className={styles.button}>

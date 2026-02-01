@@ -17,7 +17,7 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: 'Adoption Report',
-  description: 'Prueba técnica para el puesto de Frontend Developer',
+  description: 'Prueba técnica para el puesto de Frontend Engineer',
 };
 
 export default function RootLayout({
