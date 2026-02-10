@@ -28,6 +28,12 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+@media (min-width: 1728px) {
+  body {
+    background: $color-dark-background;
+  }
+}
+
 h1 {
   font-family: var(--font-roboto), sans-serif;
   font-weight: 700;
