@@ -1,7 +1,7 @@
 import styles from './EvolutionUse.module.scss';
-import { UsageEvolutionChart } from '../../atoms/UsageEvolutionChart/UsageEvolutionChart';
-import { UsageEvolutionData } from '../../atoms/UsageEvolutionChart/UsageEvolutionChart.types';
-import { TypeUse } from '../../atoms/TypeUse/TypeUse';
+import { UsageEvolutionChart } from '@/components/atoms/UsageEvolutionChart/UsageEvolutionChart';
+import { UsageEvolutionData } from '@/components/atoms/UsageEvolutionChart/UsageEvolutionChart.types';
+import { TypeUse } from '@/components/atoms/TypeUse/TypeUse';
 
 interface EvolutionUseProps {
   title: string;

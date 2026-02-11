@@ -1,11 +1,11 @@
 import styles from './DashboardView.module.scss';
-import TeamMetric from '../../../components/molecules/Team/TeamMetric';
-import ExecutiveSummary from '../../../components/molecules/ExecutiveSummary/ExecutiveSummary';
-import ToolUsage from '../../../components/molecules/ToolUsage/ToolUsage';
-import { EvolutionUse } from '../../../components/molecules/EvolutionUse/EvolutionUse';
-import InformationModal from '../../../components/atoms/InformationModal/InformationModal';
+import TeamMetric from '@/components/molecules/Team/TeamMetric';
+import ExecutiveSummary from '@/components/molecules/ExecutiveSummary/ExecutiveSummary';
+import ToolUsage from '@/components/molecules/ToolUsage/ToolUsage';
+import { EvolutionUse } from '@/components/molecules/EvolutionUse/EvolutionUse';
+import InformationModal from '@/components/atoms/InformationModal/InformationModal';
 
-import { ToolUsageData } from '../../../features/dashboard/types';
+import { ToolUsageData } from '@/features/dashboard/types';
 
 interface ChartData {
   month: string;

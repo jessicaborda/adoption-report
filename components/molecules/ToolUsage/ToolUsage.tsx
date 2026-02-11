@@ -1,5 +1,5 @@
 import styles from './ToolUsage.module.scss';
-import MetricCard from '../../atoms/MetricCard/MetricCard';
+import MetricCard from '@/components/atoms/MetricCard/MetricCard';
 
 interface ToolData {
   toolName: string;
